@@ -32,5 +32,5 @@ msg_text.set_content("""\
 
 with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
     smtp.starttls()
-    smtp.login((os.environ['LOGIN']), (os.environ['PASSWORD']))
+    smtp.login(os.environ['LOGIN'], os.environ['PASSWORD'])
     smtp.send_message(msg_text)
